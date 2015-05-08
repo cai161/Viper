@@ -1,6 +1,8 @@
 //
-// Created by AUTHOR
-// Copyright (c) YEAR AUTHOR. All rights reserved.
+//
+//
+// Created by AUTHOR on DAY/MONTH/YEAR.
+// Copyright (c) YEAR RenRenChe Inc. All rights reserved.
 //
 
 #import "VIPERLocalDataManager.h"

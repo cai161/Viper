@@ -1,7 +1,10 @@
 //
-// Created by AUTHOR
-// Copyright (c) YEAR AUTHOR. All rights reserved.
 //
+//
+// Created by AUTHOR on DAY/MONTH/YEAR.
+// Copyright (c) YEAR RenRenChe Inc. All rights reserved.
+//
+
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
@@ -17,65 +20,73 @@
 
 @class VIPERWireframe;
 
+/**
+* PRESENTER -> VIEWCONTROLLER
+*/
 @protocol VIPERViewProtocol
 @required
 @property (nonatomic, strong) id <VIPERPresenterProtocol> presenter;
-/**
-* Add here your methods for communication PRESENTER -> VIEWCONTROLLER
-*/
+
 @end
 
+/**
+* PRESENTER -> WIREFRAME
+*/
 @protocol VIPERWireframeProtocol
 @required
 + (void)presentVIPERModuleFrom:(id)fromView;
-/**
-* Add here your methods for communication PRESENTER -> WIREFRAME
-*/
+
 @end
 
+/**
+* VIEWCONTROLLER -> PRESENTER
+*/
 @protocol VIPERPresenterProtocol
 @required
 @property (nonatomic, weak) id <VIPERViewProtocol> view;
 @property (nonatomic, strong) id <VIPERInteractorInputProtocol> interactor;
 @property (nonatomic, strong) id <VIPERWireframeProtocol> wireframe;
-/**
-* Add here your methods for communication VIEWCONTROLLER -> PRESENTER
-*/
+
 @end
 
+/**
+* INTERACTOR -> PRESENTER
+*/
 @protocol VIPERInteractorOutputProtocol
-/**
-* Add here your methods for communication INTERACTOR -> PRESENTER
-*/
+
 @end
 
+/**
+* PRESENTER -> INTERACTOR
+*/
 @protocol VIPERInteractorInputProtocol
 @required
 @property (nonatomic, weak) id <VIPERInteractorOutputProtocol> presenter;
 @property (nonatomic, strong) id <VIPERAPIDataManagerInputProtocol> APIDataManager;
 @property (nonatomic, strong) id <VIPERLocalDataManagerInputProtocol> localDataManager;
-/**
-* Add here your methods for communication PRESENTER -> INTERACTOR
-*/
+
 @end
 
 
+/**
+* INTERACTOR -> DATAMANAGER
+*/
 @protocol VIPERDataManagerInputProtocol
-/**
-* Add here your methods for communication INTERACTOR -> DATAMANAGER
-*/
+
 @end
 
+/**
+* INTERACTOR -> APIDATAMANAGER
+*/
 @protocol VIPERAPIDataManagerInputProtocol <VIPERDataManagerInputProtocol>
-/**
-* Add here your methods for communication INTERACTOR -> APIDATAMANAGER
-*/
+
 @end
 
-@protocol VIPERLocalDataManagerInputProtocol <VIPERDataManagerInputProtocol>
 /**
-* Add here your methods for communication INTERACTOR -> LOCLDATAMANAGER
+* INTERACTOR -> LOCLDATAMANAGER
 */
+@protocol VIPERLocalDataManagerInputProtocol <VIPERDataManagerInputProtocol>
+
 @end
 
 

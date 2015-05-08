@@ -1,7 +1,10 @@
 //
-// Created by AUTHOR
-// Copyright (c) YEAR AUTHOR. All rights reserved.
 //
+//
+// Created by AUTHOR on DAY/MONTH/YEAR.
+// Copyright (c) YEAR RenRenChe Inc. All rights reserved.
+//
+
 
 #import "VIPERWireframe.h"
 
@@ -18,7 +21,7 @@
     id <VIPERLocalDataManagerInputProtocol> localDataManager = [VIPERLocalDataManager new];
     id <VIPERWireframeProtocol> wireframe = [VIPERWireframe new];
 
-    // Connecting
+    // Connecting module components
     view.presenter = presenter;
     presenter.view = view;
     presenter.wireframe = wireframe;
@@ -27,7 +30,7 @@
     interactor.APIDataManager = APIDataManager;
     interactor.localDataManager = localDataManager;
 
-    //TODO - New view controller presentation (present, push, pop, .. )
+    // TODO - New view controller presentation (present, push, pop, .. )
 }
 
 @end
