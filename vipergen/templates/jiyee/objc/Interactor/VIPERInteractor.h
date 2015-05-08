@@ -11,7 +11,7 @@
 
 @property (nonatomic, strong) id <VIPERAPIDataManagerInputProtocol> APIDataManager;
 @property (nonatomic, strong) id <VIPERLocalDataManagerInputProtocol> localDataManager;
-@property (nonatomic, weak) id <VIPERInteractorOutputProtocol> output;
+@property (nonatomic, weak) id <VIPERInteractorOutputProtocol> presenter;
 
 - (instancetype)initWithAPIDataManager:(VIPERAPIDataManager *)APIDataManager;
 
