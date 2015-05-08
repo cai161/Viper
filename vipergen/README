@@ -1,0 +1,5 @@
+##vipergen使用说明
+
+把tempaltes/jiyee目录链接至/Library/Ruby/Gems/2.0.0/gems/vipergen-0.2.4/lib/templates/default
+
+执行vipergen generate RRC --path=./ --author=jiyee
