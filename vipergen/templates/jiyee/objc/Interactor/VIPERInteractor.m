@@ -1,7 +1,10 @@
 //
-// Created by AUTHOR
-// Copyright (c) YEAR AUTHOR. All rights reserved.
+// FILE
 //
+// Created by AUTHOR on DAY/MONTH/YEAR.
+// Copyright (c) YEAR RenRenChe Inc. All rights reserved.
+//
+
 
 #import "VIPERInteractor.h"
 
@@ -14,7 +17,7 @@
 @implementation VIPERInteractor
 
 - (instancetype)initWithDataManager:(VIPERAPIDataManager *)APIDataManager {
-        
+
     self = [super init];
     if (self) {
         _APIDataManager = APIDataManager;
